@@ -118,3 +118,36 @@
 - **Short-term store:** low-latency DB (DynamoDB, Timestream, Redis) for 1s-visibility metrics; long retention and analytics live in S3 + data lake.
 - **Backpressure & graceful degradation:** SDKs must drop or sample telemetry if local queues/backups exceed threshold to avoid affecting bidding.
 - **High-cardinality control:** limit labels/tags, use hashing buckets, or use approximate structures (HLL, t-digest) for heavy cardinalities.
+
+---
+Here are some of the most relevant resources you can use this week to ramp up quickly for building 1-second observability + traceability for a DSP. I grouped them by topic so you can pick what you need most first:
+
+### ✅ Observability / Telemetry Pipelines
+- “Observability Pipeline: An Easy‐to-Follow Guide for Engineers” (by Last9) — covers how to build & optimise observability pipelines. Last9
+- “Understanding Observability Pipelines – A Practical Guide” (by SigNoz) — walks you through core components, challenges & best practices. SigNoz
+- “What you need in a telemetry pipeline” (by Chronosphere) — explains how to control, route, enrich telemetry data at scale. Chronosphere
+- “How to Maximise Telemetry Data Value With Observability Pipelines” (by DevOps.com) — shows how to reduce noise, filter, sample telemetry so you focus on the important stuff. DevOps.com
+
+### ✅ Distributed Tracing & High-Throughput Systems
+- “Distributed Tracing Logs: How They Work, Benefits & Best Practices” (by Groundcover) — strong on trace-log correlation + instrumentation advice. Groundcover
+- “Optimizing Distributed Tracing: Best practices for remaining within budget and capturing critical traces” (by Datadog) — good guidance on sampling, prioritisation. Datadog
+- “Distributed Tracing: Concepts, Pros/Cons & Best Practices” (by Coralogix) — conceptual foundation you can use to anchor your tracing strategy. Coralogix
+- “Investigating Performance Overhead of Distributed Tracing” (academic paper) — useful for understanding cost/overhead trade-offs in high-traffic environments. @Large Research
+
+### ✅ AdTech / DSP / Real-Time Bidding Context
+- “Implementing High-Performance Ad Tech Demand-Side Platforms (DSPs)” (by The New Stack) — architecture & per-millisecond latency case-study relevant for your domain. The New Stack
+- “Build a reference architecture for a demand-side platform” (by Redpanda) — DSP-specific architecture reference you can tie into your observability project. Redpanda
+- “Guidance for capturing Advertising OpenRTB real-time bidding events for analytics on AWS” (by Amazon Web Services) — shows how to capture high throughput real-time bidding events, which overlaps with observability. Amazon Web Services, Inc.
+- “AdTech data pipelines: Best practices for architecting efficient AdTech platforms” (by Xenoss) — more on the data pipeline side of the ad-tech world. Xenoss
+
+### 📋 How to Use These in < 1 Week
+- Day 1 – Read the observability pipeline guides (Last9 + SigNoz) to get a mental model of telemetry systems.
+- Day 2 – Dive tracing best practices (Groundcover + Datadog) so you’re comfortable with trace/log/metric correlation and sampling.
+- Day 3 – Review DSP/RTB architecture stuff (New Stack + Redpanda + AWS) so you understand the domain constraints you’ll be working within.
+- Day 4 – Focus on data pipeline observability (Chronosphere + DevOps.com + Xenoss) because you'll be building streaming/ingestion pipelines.
+- Day 5 – Review the academic/performance overhead papers to prepare for trade-offs with instrumentation in high throughput systems.
+- Day 6–7 – Create a mini “observability strategy” document for your first sprint: pick 2–3 metrics/traces to instrument first, decide sampling strategy, decide streaming backbone approach, sketch local flush & ingestion path. Use the resources to justify technical choices.
+
+Optional – Bookmark these for reference when you’re coding: batch size/settings, sampling rates, cardinality limits, backpressure strategies.
+
+
