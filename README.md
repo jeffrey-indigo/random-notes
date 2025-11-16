@@ -123,8 +123,8 @@
 Here are some of the most relevant resources you can use this week to ramp up quickly for building 1-second observability + traceability for a DSP. I grouped them by topic so you can pick what you need most first:
 
 ### ✅ Observability / Telemetry Pipelines
-- “Observability Pipeline: An Easy‐to-Follow Guide for Engineers” (by Last9) — covers how to build & optimise observability pipelines. Last9
-- “Understanding Observability Pipelines – A Practical Guide” (by SigNoz) — walks you through core components, challenges & best practices. SigNoz
+- [“Observability Pipeline: An Easy‐to-Follow Guide for Engineers” (by Last9) — covers how to build & optimise observability pipelines. Last9](https://last9.io/blog/observability-pipeline/?utm_source=chatgpt.com)
+- [“Understanding Observability Pipelines – A Practical Guide” (by SigNoz) — walks you through core components, challenges & best practices. SigNoz](https://signoz.io/guides/observability-pipeline/)
 - “What you need in a telemetry pipeline” (by Chronosphere) — explains how to control, route, enrich telemetry data at scale. Chronosphere
 - “How to Maximise Telemetry Data Value With Observability Pipelines” (by DevOps.com) — shows how to reduce noise, filter, sample telemetry so you focus on the important stuff. DevOps.com
 
